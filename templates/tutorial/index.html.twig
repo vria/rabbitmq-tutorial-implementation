@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>RabbitMQ tutorial</h1>
+    <dl>
+        <dt>
+            <a href="{{ path('tutorial_one') }}" target="_blank">Hello World!</a>
+        </dt>
+        <dd>
+            Launch a receiver :
+            <pre>php bin/console tutorial:one:receiver</pre>
+        </dd>
+
+        <dt>
+            <a href="{{ path('tutorial_two', {complexity: 5}) }}" target="_blank">
+                Work queues
+            </a>
+            <em>(try changing "complexity" URL parameter)</em>
+        </dt>
+        <dd>
+            Launch several receivers in different terminals :
+            <pre>php bin/console tutorial:two:receiver</pre>
+        </dd>
+
+        <dt>
+            <a href="{{ path('tutorial_three') }}" target="_blank">
+                Publish/Subscribe
+            </a>
+        </dt>
+        <dd>
+            Launch several receivers in different terminals :
+            <pre>php bin/console tutorial:three:receiver</pre>
+        </dd>
+
+        <dt>
+            <a href="{{ path('tutorial_four', {severity: 'debug'}) }}" target="_blank">
+                Routing
+            </a>
+            <em>(try changing "severity" URL parameter to "debug", "normal", "critical")</em>
+        </dt>
+        <dd>
+            Launch several receivers in different terminals :
+            <pre>php bin/console tutorial:four:receiver --severity=debug</pre>
+            <pre>php bin/console tutorial:four:receiver -sdebug -snormal</pre>
+        </dd>
+
+        <dt>
+            <a href="{{ path('tutorial_five', {facility: 'auth', severity: 'debug'}) }}" target="_blank">
+                Topics
+            </a>
+            <em>(try changing "facility" and "severity" URL parameters)</em>
+        </dt>
+        <dd>
+            Launch several receivers in different terminals :
+            <pre>php bin/console tutorial:five:receiver "#"</pre>
+            <pre>php bin/console tutorial:five:receiver "*.critical"</pre>
+            <pre>php bin/console tutorial:five:receiver "*auth.normal"</pre>
+        </dd>
+
+        <dt>
+            <a href="{{ path('tutorial_six', {n: 10}) }}" target="_blank">
+                RPC
+            </a>
+            <em>(try changing "n" URL parameter)</em>
+        </dt>
+        <dd>
+            Launch a receiver:
+            <pre>php bin/console tutorial:six:receiver</pre>
+        </dd>
+    </dl>
+{% endblock body %}

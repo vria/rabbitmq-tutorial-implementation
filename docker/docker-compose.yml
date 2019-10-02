@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+    php:
+        build: ./php-fpm
+        ports:
+            - "9000:9001"
+        volumes:
+            - ../:/var/www/symfony
+        links:
+            - rabbitmq
+
+    nginx:
+        build: ./nginx
+        ports:
+            - "80:80"
+        links:
+            - php
+        volumes:
+            - ./logs/nginx:/var/log/nginx:cached
+            - ./symfony:/var/www/symfony:cached
+
+    rabbitmq:
+        image: rabbitmq:3-management
+        ports:
+          - "15672:15672"
