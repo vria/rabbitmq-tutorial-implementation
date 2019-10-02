@@ -11,7 +11,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 /**
  * @see \App\Controller\TutorialController::two()
  *
- * @author Vlad Riabchenko <vriabchenko@webnet.fr>
+ * @author Vlad Riabchenko <contact@vria.eu>
  */
 class TutorialTwoReceiverCommand extends Command
 {

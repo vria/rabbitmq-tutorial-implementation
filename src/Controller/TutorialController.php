@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * https://www.rabbitmq.com/tutorials/tutorial-one-php.html
  *
- * @author Vlad Riabchenko <vriabchenko@webnet.fr>
+ * @author Vlad Riabchenko <contact@vria.eu>
  */
 class TutorialController
 {

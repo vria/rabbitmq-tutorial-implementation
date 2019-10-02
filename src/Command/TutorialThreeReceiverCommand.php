@@ -11,7 +11,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 /**
  * The sender is @see \App\Controller\TutorialController::three()
  *
- * @author Vlad Riabchenko <vriabchenko@webnet.fr>
+ * @author Vlad Riabchenko <contact@vria.eu>
  */
 class TutorialThreeReceiverCommand extends Command
 {

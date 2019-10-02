@@ -12,7 +12,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 /**
  * The sender is @see \App\Controller\TutorialController::four()
  *
- * @author Vlad Riabchenko <vriabchenko@webnet.fr>
+ * @author Vlad Riabchenko <contact@vria.eu>
  */
 class TutorialFourReceiverCommand extends Command
 {
